@@ -189,7 +189,7 @@ E somar o próximo offset **0x54**:
  Faremos uma nova leitura:
 
     ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
-    cout << "Valor com o segundo Offset : " << total << endl;
+    cout << "Valor com o terceiro Offset : " << total << endl;
 
 Resultado:
 <br>
@@ -215,18 +215,18 @@ E somar o próximo offset **0x280**:
  Faremos uma nova leitura:
 
     ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
-    cout << "Valor com o segundo Offset : " << total << endl;
+    cout << "Valor com o quinto Offset : " << total << endl;
 
 Resultado:
-<br>
+<br>![ponteiro6](https://github.com/user-attachments/assets/d418f1da-b1ad-4c38-962a-371983963a0d)
 
-E somar o próximo offset **0x3C0**:
+Podemos notar que os offsets estão vindo exatamente iguais, e está tudo bem, podemos continuar e somar o próximo offset **0x3C0**:
 
     total = total + 0x3C0
  Faremos uma nova leitura:
 
     ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
-    cout << "Valor com o segundo Offset : " << total << endl;
+    cout << "Valor com o sexto Offset : " << total << endl;
 
 Resultado:
 <br>
