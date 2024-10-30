@@ -1,3 +1,4 @@
+
 # O início:
 ![Static Badge](https://img.shields.io/badge/require-c%2B%2B-%20?style=flat&logo=windows&color=red)
 <br>Antes de começar a se aventurar procurando mobs para matar, é recomendado treinar e aprender o basico!
@@ -127,7 +128,7 @@ Oque nos leva ao seguinte código:
     
     	return 0;
     };
-Resultado:<br>
+Resultado:
 ![result](https://github.com/user-attachments/assets/240ab3c3-8609-427d-93e0-a5ae53147367)
 
 
@@ -150,7 +151,8 @@ E em seguida vamos somar esses 2 valores e guardá-los em uma variável do mesmo
     uintptr_t total = base + desloc_memo;
     ReadProcessMemory(handle, (DWORD*)total, &total, 4, &bytes_read);
 	cout << "Valor da Soma Base " << total << endl;
-Resultado:<br>
+
+Resultado:
 ![ponteiro](https://github.com/user-attachments/assets/9da77f3b-9a0e-4f3c-a526-f6c0c39166b7)
 
 **Offsets**
@@ -166,30 +168,29 @@ De cara vamos somar o offset **0** o qual não mudará nada kkkk, mas é importa
 E em seguida faremos uma nova leitura e salvaremos na mesma variável **total**:
 
     ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
-    cout << "Valor com o segundo ponteiro " << total << endl;
+    cout << "Valor com o primeiro Offset: " << total << endl;
 Resultado:
-<br>
 ![ponteiro2](https://github.com/user-attachments/assets/54549388-77a1-4785-8cb0-6a165aa80df8)
 
 Assim podemos somar o próximo offset **0x14**:
 
-    total = total + 0x14
+    total = total + 0x14;
 Novamente Faremos uma nova leitura:
 
     ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
     cout << "Valor com o segundo Offset : " << total << endl;
 
 Resultado:
-<br>
 ![ponteiro3](https://github.com/user-attachments/assets/ead26b03-8123-4957-849a-d5f62f130dd5)
 
 E somar o próximo offset **0x54**:
 
-    total = total + 0x54
+    total = total + 0x54;
  Faremos uma nova leitura:
 
     ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
     cout << "Valor com o terceiro Offset : " << total << endl;
+
 
 Resultado:
 <br>
@@ -197,7 +198,7 @@ Resultado:
 
 E somar o próximo offset **0x6C**:
 
-    total = total + 0x6C
+    total = total + 0x6C;
  Faremos uma nova leitura:
 
     ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
@@ -208,10 +209,9 @@ Resultado:
 ![ponteiro5](https://github.com/user-attachments/assets/097340e9-18d4-4e36-b873-1ce2fdf90927)
 
 
-
 E somar o próximo offset **0x280**:
 
-    total = total + 0x280
+    total = total + 0x280;
  Faremos uma nova leitura:
 
     ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
@@ -222,7 +222,7 @@ Resultado:
 
 Podemos notar que os offsets estão vindo exatamente iguais, e está tudo bem, podemos continuar e somar o próximo offset **0x3C0**:
 
-    total = total + 0x3C0
+    total = total + 0x3C0;
  Faremos uma nova leitura:
 
     ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
@@ -230,3 +230,73 @@ Podemos notar que os offsets estão vindo exatamente iguais, e está tudo bem, p
 
 Resultado:
 <br>
+![ponteiro7](https://github.com/user-attachments/assets/7f35a8a9-ed62-445e-a719-9a6337ebc513)
+E finalmente **0x110-0x8** que é igual a **0x108**:
+
+    total = total + 0x108;
+
+ Faremos uma nova leitura:
+
+    ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
+    cout << "Valor com o sexto Offset : " << total << endl;
+
+Resultado:
+<br>
+![ponteiro8](https://github.com/user-attachments/assets/54b52af8-3468-4ffd-aba0-8c31fc73758b)
+
+Aí está o valor da vida do Personagem!
+
+Caso Queira o Código completo:
+
+    #include <windows.h>
+    #include <iostream>
+    
+    using namespace std;
+    
+    int main()
+    {
+    	int vida = 0;
+    	DWORD valor_lido = 0;
+    	DWORD bytes_read = 0;
+    
+    	HWND warspear_window = FindWindowA(NULL,"Warspear Online");
+    
+    	DWORD process_id = 0;
+    	GetWindowThreadProcessId(warspear_window, &process_id);
+    
+    	HANDLE warspear_process = OpenProcess(PROCESS_ALL_ACCESS, true, process_id);
+    
+    	uintptr_t base = 0x400000;
+    	uintptr_t desloc_memo = 0x847FF8;
+    	uintptr_t total = base + desloc_memo;
+    	
+    	ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
+    	cout << "Valor da Soma Base " << total << endl;
+    	total = total + 0;
+    	ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
+    	cout << "Valor com o primeiro Offset : " << total << endl;
+    	total = total + 0x14;
+    	ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
+    	cout << "Valor com o segundo Offset : " << total << endl;
+    	total = total + 0x54;
+    	ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
+    	cout << "Valor com o terceiro Offset : " << total << endl;
+    	total = total + 0x6C;
+    	ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
+    	cout << "Valor com o quarto Offset : " << total << endl;
+    	total = total + 0x280;
+    	ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
+    	cout << "Valor com o quinto Offset : " << total << endl;
+    	total = total + 0x3C0;
+    	ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
+    	cout << "Valor com o sexto Offset : " << total << endl;
+    	total = total + 0x108;
+    	ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
+    	cout << "Valor com o sétimo Offset : " << total << endl;
+    	return 0;
+    };
+
+Lembrando que esse código é útil até a versão atual do 
+**Warspear Online: 12.6.0 24/10/2024-1**
+
+Executável para Testar em seu Computador:
