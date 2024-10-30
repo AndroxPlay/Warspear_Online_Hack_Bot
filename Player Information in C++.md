@@ -159,7 +159,7 @@ Resultado:
 
 ![image](https://github.com/user-attachments/assets/134752c7-113a-4b8d-b1a7-e7708b9667bd)
 
-Agora existem 2 formas de prosseguir, você pode criar um loop que leia a memória e some um offset de cada vez, ou pode somar aos poucos e verificando se o resultado bate, e é oq faremos a seguir:
+Agora existem 2 formas de prosseguir, você pode criar um loop que leia a memória e some um offset de cada vez, ou pode somar aos poucos e verificar se o resultado bate, e é oq faremos a seguir:
 
 De cara vamos somar o offset **0** o qual não mudará nada kkkk, mas é importante manter o padrão:
 
