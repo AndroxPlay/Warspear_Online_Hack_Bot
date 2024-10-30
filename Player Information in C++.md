@@ -148,7 +148,7 @@ E para o endereço de deslocamento na memória:
 E em seguida vamos somar esses 2 valores e guardá-los em uma variável do mesmo tipo e ler a memória para ver para onde o resultado dessa soma está apontado:
 
     uintptr_t total = base + desloc_memo;
-    ReadProcessMemory(handle, (LPCVOID*)total, &total, 4, &bytes_lidos);
+    ReadProcessMemory(handle, (DWORD*)total, &total, 4, &bytes_read);
 	cout << "Valor da Soma Base " << total << endl;
 
 **Offsets**
@@ -156,3 +156,11 @@ E em seguida vamos somar esses 2 valores e guardá-los em uma variável do mesmo
 ![image](https://github.com/user-attachments/assets/134752c7-113a-4b8d-b1a7-e7708b9667bd)
 
 Agora existem 2 formas de prosseguir, você pode criar um loop que leia a memória e some um offset de cada vez, ou pode somar aos poucos e verificando se o resultado bate, e é oq faremos a seguir:
+
+De cara vamos somar o offset **0** o qual não mudará nada kkkk, mas é importante manter o padrão:
+
+    total = total + 0;
+
+E em seguida faremos uma nova leitura:
+
+    ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
