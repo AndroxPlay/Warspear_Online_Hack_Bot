@@ -145,11 +145,13 @@ Então usaremos uma variável do tipo uintptr_t para criar um ponteiro para o en
 E para o endereço de deslocamento na memória:
 
     uintptr_t desloc_memo = 0x847FF8;
-E em seguida vamos somar esses 2 valores e guardá-los em uma variável do mesmo tipo e ler a memória para ver para onde o resultado dessa soma está apontado:
+E em seguida vamos somar esses 2 valores e guardá-los em uma variável do mesmo tipo e ler a memória (sobrescrevendo a variável criada: **total**) para ver para onde o resultado dessa soma está apontado:
 
     uintptr_t total = base + desloc_memo;
     ReadProcessMemory(handle, (DWORD*)total, &total, 4, &bytes_read);
 	cout << "Valor da Soma Base " << total << endl;
+Resultado:<br>
+![ponteiro](https://github.com/user-attachments/assets/9da77f3b-9a0e-4f3c-a526-f6c0c39166b7)
 
 **Offsets**
 
@@ -161,6 +163,70 @@ De cara vamos somar o offset **0** o qual não mudará nada kkkk, mas é importa
 
     total = total + 0;
 
-E em seguida faremos uma nova leitura:
+E em seguida faremos uma nova leitura e salvaremos na mesma variável **total**:
 
     ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
+    cout << "Valor com o segundo ponteiro " << total << endl;
+Resultado:
+<br>
+![ponteiro2](https://github.com/user-attachments/assets/54549388-77a1-4785-8cb0-6a165aa80df8)
+
+Assim podemos somar o próximo offset **0x14**:
+
+    total = total + 0x14
+Novamente Faremos uma nova leitura:
+
+    ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
+    cout << "Valor com o segundo Offset : " << total << endl;
+
+Resultado:
+<br>
+![ponteiro3](https://github.com/user-attachments/assets/ead26b03-8123-4957-849a-d5f62f130dd5)
+
+E somar o próximo offset **0x54**:
+
+    total = total + 0x54
+ Faremos uma nova leitura:
+
+    ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
+    cout << "Valor com o segundo Offset : " << total << endl;
+
+Resultado:
+<br>
+![ponteiro4](https://github.com/user-attachments/assets/2da8a1cf-d50e-4a4a-a746-b0e92f2cdf83)
+
+E somar o próximo offset **0x6C**:
+
+    total = total + 0x6C
+ Faremos uma nova leitura:
+
+    ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
+    cout << "Valor com o quarto Offset : " << total << endl;
+
+Resultado:
+<br>
+![ponteiro5](https://github.com/user-attachments/assets/097340e9-18d4-4e36-b873-1ce2fdf90927)
+
+
+
+E somar o próximo offset **0x280**:
+
+    total = total + 0x280
+ Faremos uma nova leitura:
+
+    ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
+    cout << "Valor com o segundo Offset : " << total << endl;
+
+Resultado:
+<br>
+
+E somar o próximo offset **0x3C0**:
+
+    total = total + 0x3C0
+ Faremos uma nova leitura:
+
+    ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
+    cout << "Valor com o segundo Offset : " << total << endl;
+
+Resultado:
+<br>
