@@ -53,6 +53,7 @@ Usamos o **(&)** para salvar o valor do id dentro da variavel process_id!
 Vale notar que esse valor é uma variável do tipo Dword ao qual usaremos no próximo passo!<br><br>
 
 **OpenProcess**
+<br>
 Com o ID do processo podemos abrir ele com propriedades de escrita e leitura de dados, e para isso usamos o [OpenProcess:](https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocess)
 
     HANDLE OpenProcess(
@@ -67,6 +68,7 @@ Ex:
 Precisávamos de um handle para utilizarmos no próximo passo que é finalmente o de leitura de memória!<br><br>
 
 **ReadProcessMemory**
+<br>
 Finalmente podemos ler a memória do nosso game!
 Precisamos apenas preencher as informações que a função [ReadProcessMemory](https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-readprocessmemory) nos pede:
 
