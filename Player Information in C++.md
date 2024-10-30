@@ -238,7 +238,7 @@ E finalmente **0x110-0x8** que é igual a **0x108**:
  Faremos uma nova leitura:
 
     ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
-    cout << "Valor com o sexto Offset : " << total << endl;
+    cout << "Valor com o  Offset : " << total << endl;
 
 Resultado:
 <br>
@@ -292,7 +292,7 @@ Caso Queira o Código completo:
     	cout << "Valor com o sexto Offset : " << total << endl;
     	total = total + 0x108;
     	ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
-    	cout << "Valor com o sétimo Offset : " << total << endl;
+    	cout << "Valor com o setimo Offset : " << total << endl;
      	system("pause");
     	return 0;
     };
