@@ -128,7 +128,7 @@ Oque nos leva ao seguinte código:
     
     	return 0;
     };
-Resultado:
+Resultado:<br>
 ![result](https://github.com/user-attachments/assets/240ab3c3-8609-427d-93e0-a5ae53147367)
 
 
