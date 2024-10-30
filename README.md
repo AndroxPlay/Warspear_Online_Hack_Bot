@@ -1,5 +1,21 @@
 # Warspear Online Bots List
 Olá a todos, e sejam Muito Bem Vindos!!!
+<br>Não Esqueça de dar uma passadinha no meu canal:
+
+<div align="center">
+  <a href="https://www.youtube.com/@androxplay822">
+    <img src="https://github.com/user-attachments/assets/d84fcbe8-9829-4f3c-b68a-9f16db2f88e4" alt="Logo do AndroxPlay" />
+  </a>
+</div>
+
+<div align="center">
+  <a href="https://www.youtube.com/@androxplay822?sub_confirmation=1">
+    <img src="https://github.com/user-attachments/assets/669d2a85-a98c-4845-ac71-4d7a139d4efe" alt="Subscribe!" />
+  </a>
+</div>
+
+
+
 <br>Aqui Estão alguns dos Bots que trabalharemos para criar juntos:
 
 ## Entity Finder
