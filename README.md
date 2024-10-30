@@ -21,11 +21,6 @@
 <div align="center">
 Antes de começar, dê uma olhadinha em algo mais simples e básico:
   
-  Requer:
-  ![Static Badge](https://img.shields.io/badge/C%2B%2B-B%C3%A1sico-red?style=flat&logo=cplusplus&logoColor=white&logoSize=auto)
-</div>
-<div align="center">
-
 [Player Information in C++.md](https://github.com/AndroxPlay/Warspear_Online_Hack_Bot/blob/0ebf8ecbdfb7f5549fbb83bcccf73c37a14c68cc/Player%20Information%20in%20C++.md)
 </div>
 
