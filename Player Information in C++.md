@@ -1,6 +1,5 @@
 # O início:
-![Static Badge](https://img.shields.io/badge/C%2B%2B-%20?style=for-the-badge&color=red) 
-
+![Static Badge](https://img.shields.io/badge/require-c%2B%2B-%20?style=flat&logo=windows&color=red)
 <br>Antes de começar a se aventurar procurando mobs para matar, é recomendado treinar e aprender o basico!
 É recomendado que você saiba o básico de uma estrutura em C++:
     
