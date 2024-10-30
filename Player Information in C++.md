@@ -1,4 +1,4 @@
-
+h
 # O início:
 ![Static Badge](https://img.shields.io/badge/require-c%2B%2B-%20?style=flat&logo=windows&color=red)
 <br>Antes de começar a se aventurar procurando mobs para matar, é recomendado treinar e aprender o basico!
@@ -238,7 +238,7 @@ E finalmente **0x110-0x8** que é igual a **0x108**:
  Faremos uma nova leitura:
 
     ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
-    cout << "Valor com o  Offset : " << total << endl;
+    cout << "Valor com o setimo Offset : " << total << endl;
 
 Resultado:
 <br>
