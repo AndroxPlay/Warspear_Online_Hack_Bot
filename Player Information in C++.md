@@ -24,7 +24,7 @@ Também é recomendado que você aprenda sobre a API do windows, pois vamos usar
 
 **FindWindowA**
 <br>
-Para encontrar-mos a janela pelo nome (Warspear Online) usare-mos o [FindWindow:](https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-findwindowa)
+Para encontrar-mos a janela pelo nome (Warspear Online) usaremos o [FindWindow:](https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-findwindowa)
 
     HWND FindWindowA(
         LPCSTR lpClassName,
