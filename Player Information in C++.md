@@ -123,5 +123,8 @@ Oque nos leva ao seguinte código:
     
     	return 0;
     };
+Resultado:<br>
+![result](https://github.com/user-attachments/assets/240ab3c3-8609-427d-93e0-a5ae53147367)
+
 
 Lembrando que o endereço: 0x0EB951E8 é dinâmico e não estático, visto que o game busca sempre poupar memória...e para isso vamos ler a memória e somar o deslocamento de ponteiro:
