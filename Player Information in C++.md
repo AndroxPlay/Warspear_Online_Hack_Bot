@@ -80,3 +80,17 @@ Ex:
 
     ReadProcessMemory(warspear_process, (DWORD*)0x01234ABC, &valor_lido, 4, &bytes_read);
 
+Essa função nos retorna o valor que queremos saber dentro da variável:
+
+    valor_lido
+
+Tambem retorna a quantidade de bytes lidos dentro da variável:
+
+    bytes_read
+
+E ela requer 2 parâmetros que precisamos indicar, o primeiro sendo o Endereço de memória que queremos ler e o tipo dele, nesse caso um DWORD* para identificar que é um DWORD com ponteiro para um valor:
+
+    (DWORD*)0x1234ABC
+E em seguida o valor tipo de valor de bytes que desejamos ler:
+
+    4
