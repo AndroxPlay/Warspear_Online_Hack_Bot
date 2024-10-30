@@ -94,3 +94,34 @@ E ela requer 2 parâmetros que precisamos indicar, o primeiro sendo o Endereço 
 E em seguida o valor tipo de valor de bytes que desejamos ler:
 
     4
+
+Oque nos leva ao seguinte código:
+
+    #include <windows.h>
+    #include <iostream>
+    
+    using namespace std;
+    
+    int main()
+    {
+    	int vida = 0;
+    	DWORD valor_lido = 0;
+    	DWORD bytes_read = 0;
+    
+    	HWND warspear_window = FindWindowA(NULL,"Warspear Online");
+    
+    	DWORD process_id = 0;
+    	GetWindowThreadProcessId(warspear_window, &process_id);
+    
+    	HANDLE warspear_process = OpenProcess(PROCESS_ALL_ACCESS, true, process_id);
+    
+    	ReadProcessMemory(warspear_process, (DWORD*)0x0EB951E8, &valor_lido, 4, &bytes_read);
+    	
+    	vida = valor_lido;
+    
+    	cout << vida << endl;
+    
+    	return 0;
+    };
+
+Lembrando que o endereço: 0x0EB951E8 é dinâmico e não estático, visto que o game busca sempre poupar memória...e para isso vamos ler a memória e somar o deslocamento de ponteiro:
