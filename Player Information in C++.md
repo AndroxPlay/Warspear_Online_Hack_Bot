@@ -301,3 +301,4 @@ Lembrando que esse código é útil até a versão atual do
 **Warspear Online: 12.6.0 24/10/2024-1**
 
 Executável para Testar em seu Computador:
+[Warspear Life Bot](https://github.com/AndroxPlay/Warspear_Online_Hack_Bot/tree/774b5f30bf7a06ccd3bdd823a27ef9cd0c792a0d/Warspear%20Leitor%20de%20Vida)
