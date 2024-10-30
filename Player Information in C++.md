@@ -293,6 +293,7 @@ Caso Queira o Código completo:
     	total = total + 0x108;
     	ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
     	cout << "Valor com o sétimo Offset : " << total << endl;
+     	system("pause")
     	return 0;
     };
 
