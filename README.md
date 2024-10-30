@@ -58,7 +58,7 @@ cada Conjunto de bytes representa uma Letra:
  o(6F 00)
 ```
 ![Cobra](https://github.com/user-attachments/assets/a2faee81-4603-40be-84cb-69513ca9fa48)
-<br>Cobra = "53 00 6E 00 61 00 6B 00 65 00"
+<br>Cobra = "43 00 6F 00 62 00 72 00 61 00"
 
 ```
  C(43 00)
