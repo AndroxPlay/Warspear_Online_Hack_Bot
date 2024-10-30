@@ -96,7 +96,7 @@ Tambem retorna a quantidade de bytes lidos dentro da variável:
 E ela requer 2 parâmetros que precisamos indicar, o primeiro sendo o Endereço de memória que queremos ler e o tipo dele, nesse caso um DWORD* para identificar que é um DWORD com ponteiro para um valor:
 
     (DWORD*)0x1234ABC
-E em seguida o valor tipo de valor de bytes que desejamos ler:
+E em seguida a quantidade de bytes que desejamos ler:
 
     4
 
