@@ -132,3 +132,27 @@ Resultado:<br>
 
 
 Lembrando que o endereço: 0x0EB951E8 é dinâmico e não estático, visto que o game busca sempre poupar memória...e para isso vamos ler a memória e somar o deslocamento de ponteiro:
+
+![image](https://github.com/user-attachments/assets/af08e948-7433-4235-aca5-fb131180d1a7)
+
+Nesse caso **"warspear.exe" = 0x400000** e representa o endereço base do nosso executável, e logo em seguida temos **0x847FF8** que seria o deslocamento do game na memória ram, a soma desses 2 valores resulta em
+**0xC47FF8** que é um novo endereço, se formos ler a memória dentro desse endereço vamos obter um novo endereço: **0x0FC07644 
+(Nota: esse endereço muda sempre que você abre o jogo, visto que o game sempre vai abrir em um local diferente da memória...porém a soma continua a mesma, oq muda é apenas para onde a soma aponta!)**
+
+Então usaremos uma variável do tipo uintptr_t para criar um ponteiro para o endereço base:
+
+    uintptr_t base = 0x400000;
+E para o endereço de deslocamento na memória:
+
+    uintptr_t desloc_memo = 0x847FF8;
+E em seguida vamos somar esses 2 valores e guardá-los em uma variável do mesmo tipo e ler a memória para ver para onde o resultado dessa soma está apontado:
+
+    uintptr_t total = base + desloc_memo;
+    ReadProcessMemory(handle, (LPCVOID*)total, &total, 4, &bytes_lidos);
+	cout << "Valor da Soma Base " << total << endl;
+
+**Offsets**
+
+![image](https://github.com/user-attachments/assets/134752c7-113a-4b8d-b1a7-e7708b9667bd)
+
+Agora existem 2 formas de prosseguir, você pode criar um loop que leia a memória e some um offset de cada vez, ou pode somar aos poucos e verificando se o resultado bate, e é oq faremos a seguir:
