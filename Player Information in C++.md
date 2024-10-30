@@ -1,3 +1,9 @@
 Antes de começar a se aventurar procurando mobs para matar, é recomendado treinar e aprender o basico!
 
 É recomendado que você saiba o basico de uma estrutura em C++:
+
+    #include <windows.h>
+    using namespace std;
+    int (main) 
+    {}
+    return 0;
