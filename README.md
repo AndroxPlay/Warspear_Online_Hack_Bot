@@ -1,4 +1,4 @@
-# Warspear Online Mob Finder Parte - 01
+# Warspear Online Bots List
 Olá a todos, e sejam Muito Bem Vindos!!!
 <br>Aqui Estão alguns dos Bots que trabalharemos para criar juntos:
 
