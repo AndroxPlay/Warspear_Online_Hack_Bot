@@ -22,6 +22,7 @@ Também é recomendado que você aprenda sobre a API do windows, pois vamos usar
 <br>
 
 **FindWindowA**
+<br>
 Para encontrar-mos a janela pelo nome (Warspear Online) usare-mos o [FindWindow:](https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-findwindowa)
 
     HWND FindWindowA(
@@ -35,6 +36,7 @@ Ex:
 Essa função nos retorna um identificador de janela HWND!<br><br>
 
 **GetWindowThreadProcessId**
+<br>
 Com um identificador de janela podemos prosseguir para pegar o ID de processo usando [GetWindowThreadProcessId:](https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getwindowthreadprocessid)
 
     DWORD GetWindowThreadProcessId(
