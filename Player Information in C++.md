@@ -1,8 +1,8 @@
 # O início:
-Antes de começar a se aventurar procurando mobs para matar, é recomendado treinar e aprender o basico!
+![Static Badge](https://img.shields.io/badge/C%2B%2B-%20?style=for-the-badge&color=red) 
 
-É recomendado que você saiba o básico de uma estrutura em
-  ![Static Badge](https://img.shields.io/badge/C%2B%2B-%20?style=for-the-badge&color=red) :
+<br>Antes de começar a se aventurar procurando mobs para matar, é recomendado treinar e aprender o basico!
+É recomendado que você saiba o básico de uma estrutura em C++:
     
     #include <windows.h>
     #include <iostream>
