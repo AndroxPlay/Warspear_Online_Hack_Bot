@@ -153,6 +153,7 @@ E em seguida vamos somar esses 2 valores e guardá-los em uma variável do mesmo
 	cout << "Valor da Soma Base " << total << endl;
 
 Resultado:
+<br>
 ![ponteiro](https://github.com/user-attachments/assets/9da77f3b-9a0e-4f3c-a526-f6c0c39166b7)
 
 **Offsets**
@@ -170,6 +171,7 @@ E em seguida faremos uma nova leitura e salvaremos na mesma variável **total**:
     ReadProcessMemory(warspear_process, (DWORD*)total, &total, 4, &bytes_read);
     cout << "Valor com o primeiro Offset: " << total << endl;
 Resultado:
+<br>
 ![ponteiro2](https://github.com/user-attachments/assets/54549388-77a1-4785-8cb0-6a165aa80df8)
 
 Assim podemos somar o próximo offset **0x14**:
@@ -181,6 +183,7 @@ Novamente Faremos uma nova leitura:
     cout << "Valor com o segundo Offset : " << total << endl;
 
 Resultado:
+<br>
 ![ponteiro3](https://github.com/user-attachments/assets/ead26b03-8123-4957-849a-d5f62f130dd5)
 
 E somar o próximo offset **0x54**:
