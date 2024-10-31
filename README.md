@@ -25,7 +25,7 @@ Antes de começar, dê uma olhadinha em algo mais simples e básico:
 
 Ou
 
-
+Player Information in Python.md
 </div>
 
 
