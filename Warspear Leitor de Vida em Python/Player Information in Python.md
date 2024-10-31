@@ -1,5 +1,9 @@
 
 
+
+
+
+
 # O início:
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 <br>Antes de começar a se aventurar procurando mobs para matar, é recomendado treinar e aprender o basico!
@@ -9,6 +13,42 @@
     numero = 0
     numero = input("Digite um Numero: " )
     print("Você digitou: ", numero)
+
+Para ler a memória do warspear precisamos utilizar a biblioteca `Pymem` que permite acessar a memória dos programas que rodam no Windows!
+
+**Instalando Pymem**
+Primeiro temos que abrir o cmd e digitar:
+
+    pip install pymem
+![pyt](https://github.com/user-attachments/assets/7ffd1a7e-afef-474e-92fc-55c5848419a2)
+
+Em seguida podemos criar um arquivo que tenha a extensão .py para rodar o nosso programa...
+![leitor de memopy](https://github.com/user-attachments/assets/7244d115-4af0-4a0a-8f6b-0adb9a21bc78)
+
+Nele vamos importar a biblioteca que instalamos:
+
+    import pymem
+Em seguida vamos pegar o id do processo pelo nome do processo e vamos salvar esse id em uma variável:
+
+    process_id = "warspear.exe"
+    pm = pymem.Pymem(process_id)
+
+Em seguida podemos criar uma variável que seja nosso endereço da memória com a vida do personagem:
+
+    resultado = 0x00D30210
+
+![leitor de memoria python](https://github.com/user-attachments/assets/416108b6-db98-4788-9f4b-b4ef5eed48ed)
+
+Finalmente podemos ler esse endereço usando **pm.read_int**:
+
+    resultado = pm.read_int(resultado)
+    print("HP: ",resultado)
+
+Resultado:
+![off](https://github.com/user-attachments/assets/2cc585d6-3bc1-45b9-91be-d0b2dc7c6848)
+Lembrando que o endereço: 0x00D30210 é dinâmico e não estático, visto que o game busca sempre poupar memória...e para isso vamos ler a memória e somar o deslocamento de ponteiro:
+
+
 
 Aí está o valor da vida do Personagem!
 
