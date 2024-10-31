@@ -63,4 +63,4 @@ Lembrando que esse código é útil até a versão atual do
 
 Executável para Testar em seu Computador:
 <br>
-[Leitor de Vida Python(WarspearOnline](https://github.com/AndroxPlay/Warspear_Online_Hack_Bot/blob/02a4a13bebef5e4b22673946378a48180c861717/Warspear%20Leitor%20de%20Vida%20em%20Python/Leitor%20de%20Vida%20Python(WarspearOnline).exe)
+[Leitor de Vida Python(WarspearOnline)](https://github.com/AndroxPlay/Warspear_Online_Hack_Bot/blob/02a4a13bebef5e4b22673946378a48180c861717/Warspear%20Leitor%20de%20Vida%20em%20Python/Leitor%20de%20Vida%20Python(WarspearOnline).exe)
