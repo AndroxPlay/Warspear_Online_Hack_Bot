@@ -1,4 +1,5 @@
 
+
 # O início:
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 <br>Antes de começar a se aventurar procurando mobs para matar, é recomendado treinar e aprender o basico!
@@ -46,6 +47,34 @@ Lembrando que o endereço: 0x00D30210 é dinâmico e não estático, visto que o
 
 Nesse caso **"warspear.exe" = 0x400000** e representa o endereço base do nosso executável, e logo em seguida temos **0x847FF8** que seria o deslocamento do game na memória ram, a soma desses 2 valores resulta em **0xC47FF8** que é um novo endereço, se formos ler a memória dentro desse endereço vamos obter um novo endereço: **0xE15DCEC
  (Nota: esse endereço muda sempre que você abre o jogo, visto que o game sempre vai abrir em um local diferente da memória...porém a soma continua a mesma, oq muda é apenas para onde a soma aponta!)**
+
+Então voltaremos lá encima e criaremos 2 variáveis que servirão de endereço base e endereço de deslocamento de memória:
+
+    base = 0x400000
+    desloc_memo = 0x00847FF8
+
+E em seguida vamos somar esses 2 valores e guardá-los em nossa variável e vamos também ler a memória (sobrescrevendo a variável criada: **resultado**) para ver para onde o resultado dessa soma está apontado:
+
+    resultado = desloc_memo + base
+    resultado = pm.read_int(resultado)
+	print("Primeiro Offset",resultado )
+  Resultado: <br>
+![primeiro offset](https://github.com/user-attachments/assets/733ee890-0f7e-4ff0-b456-e22a1e0c6c7f)
+**Offsets**
+
+![image](https://github.com/user-attachments/assets/134752c7-113a-4b8d-b1a7-e7708b9667bd)
+
+Agora existem 2 formas de prosseguir, você pode criar um loop que leia a memória e some um offset de cada vez, ou pode somar aos poucos e verificar se o resultado bate, e é oq faremos a seguir:
+
+De cara vamos somar o offset **0** o qual não mudará nada kkkk, mas é importante manter o padrão:
+
+    resultado = resultado + 0x0
+E em seguida faremos uma nova leitura e salvaremos na mesma variável **resultado**:
+
+    resultado = pm.read_int(resultado)
+    print(resultado, "resultado com 1 offset")
+
+Resultado:
 
 Aí está o valor da vida do Personagem!
 
