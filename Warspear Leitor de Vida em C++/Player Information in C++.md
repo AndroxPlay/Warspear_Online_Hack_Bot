@@ -234,7 +234,7 @@ Podemos notar que os offsets estão vindo exatamente iguais, e está tudo bem, p
 Resultado:
 <br>
 ![ponteiro7](https://github.com/user-attachments/assets/7f35a8a9-ed62-445e-a719-9a6337ebc513)
-E finalmente **0x110-0x8** que é igual a **0x108**:
+<br>E finalmente **0x110-0x8** que é igual a **0x108**:
 
     total = total + 0x108;
 
