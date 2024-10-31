@@ -4,20 +4,11 @@
 <br>Antes de começar a se aventurar procurando mobs para matar, é recomendado treinar e aprender o basico!
 É recomendado que você saiba o básico de uma estrutura em Python:
     
-    #include <windows.h>
-    #include <iostream>
-    
-    using namespace std;
-    
-    int main()
-    {
-    	cout << "Eu sou um Texto :D" << endl;
-    	cout << "Digite um Numero: " << endl;
-    	int numero = 0;
-    	cin >> numero;
-    	cout << "O valor que voce digitou foi: " << numero << endl;
-    	return 0;
-    };
+    print("Eu sou um Texto :D")
+    numero = 0
+    numero = input("Digite um Numero: " )
+    print("Você digitou: ", numero)
+
 
 Também é recomendado que você aprenda sobre a API do windows, pois vamos usar algumas funções muito conhecidas:
 <br>
