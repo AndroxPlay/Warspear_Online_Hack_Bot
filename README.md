@@ -25,7 +25,7 @@ Antes de começar, dê uma olhadinha em algo mais simples e básico:
 
 Ou
 
-[Player Information in Python.md](https://github.com/AndroxPlay/Warspear_Online_Hack_Bot/blob/a851b5d541a0009e698b51d86cf97b821830d8fd/Warspear%20Leitor%20de%20Vida%20em%20Python/Player%20Information%20in%20Python.md)
+[Player Information in Python.md](https://github.com/AndroxPlay/Warspear_Online_Hack_Bot/blob/main/Warspear%20Leitor%20de%20Vida%20em%20Python%2FPlayer%20Information%20in%20Python.md)
 </div>
 
 
