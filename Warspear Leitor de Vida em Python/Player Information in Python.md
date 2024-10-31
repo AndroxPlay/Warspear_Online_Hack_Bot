@@ -1,4 +1,6 @@
 
+
+
 # O início:
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 <br>Antes de começar a se aventurar procurando mobs para matar, é recomendado treinar e aprender o basico!
@@ -105,8 +107,59 @@ Faremos uma nova leitura:
 Resultado:
 <br>
 
+![primeiro offset](https://github.com/user-attachments/assets/da97a3d3-697b-499b-be51-cceb6a0aadf5)
+E somar o próximo offset  **0x6C**:
+
+    resultado = resultado + 0x6C
 
 
+Faremos uma nova leitura:
+
+    resultado = pm.read_int(resultado)
+    print(resultado, "resultado com 4 offset")
+Resultado:
+<br>
+![segundo offset](https://github.com/user-attachments/assets/bfdab39c-2535-42a7-ac29-18cd28d8b4ae)
+E somar o próximo offset  **0x280**:
+
+    resultado = resultado + 0x280
+
+
+Faremos uma nova leitura:
+
+    resultado = pm.read_int(resultado)
+    print(resultado, "resultado com 5 offset")
+Resultado:
+<br>
+![terceiro offset](https://github.com/user-attachments/assets/b6d51caf-576c-4ab5-92f0-131508fdc983)
+Podemos notar que os offsets estão vindo exatamente iguais, e está tudo bem, podemos continuar e somar o próximo offset **0x3C0**:
+
+    resultado = resultado + 0x3C0
+
+
+Faremos uma nova leitura:
+
+    resultado = pm.read_int(resultado)
+    print(resultado, "resultado com 6 offset")
+    
+Resultado:
+<br>
+![terceiro offset](https://github.com/user-attachments/assets/88131791-d437-4757-8101-56e1f34db113)
+
+<br>E finalmente **0x110-0x8** que é igual a **0x108**:
+    
+    resultado = resultado + 0x108
+
+
+Faremos uma nova leitura:
+
+
+    resultado = pm.read_int(resultado)
+    print("HP: ",resultado)
+    
+Resultado:
+<br>
+![Hp](https://github.com/user-attachments/assets/a41912e5-f143-4500-813b-945be640fc9b)
 
 Aí está o valor da vida do Personagem!
 
