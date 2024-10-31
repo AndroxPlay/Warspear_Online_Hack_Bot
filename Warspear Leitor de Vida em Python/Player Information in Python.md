@@ -1,5 +1,7 @@
 
 
+
+
 # O início:
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 <br>Antes de começar a se aventurar procurando mobs para matar, é recomendado treinar e aprender o basico!
@@ -69,12 +71,45 @@ Agora existem 2 formas de prosseguir, você pode criar um loop que leia a memór
 De cara vamos somar o offset **0** o qual não mudará nada kkkk, mas é importante manter o padrão:
 
     resultado = resultado + 0x0
+    
 E em seguida faremos uma nova leitura e salvaremos na mesma variável **resultado**:
 
     resultado = pm.read_int(resultado)
     print(resultado, "resultado com 1 offset")
 
 Resultado:
+<br>
+![primeiro offset](https://github.com/user-attachments/assets/2b4b4082-3863-44b1-a90c-d32f6a7179ec)
+Assim podemos somar o próximo offset  **0x14**:
+
+
+    resultado = resultado + 0x14
+
+
+Novamente Faremos uma nova leitura:
+
+    resultado = pm.read_int(resultado)
+    print(resultado, "resultado com 2 offset")
+    
+Resultado:
+<br>
+![primeiro offset](https://github.com/user-attachments/assets/5dce6817-9803-4f86-95e0-7b67b736e978)
+E somar o próximo offset  **0x54**:
+
+
+    resultado = resultado + 0x54
+
+
+Faremos uma nova leitura:
+
+    resultado = pm.read_int(resultado)
+    print(resultado, "resultado com 3 offset")
+
+Resultado:
+<br>
+
+
+
 
 Aí está o valor da vida do Personagem!
 
