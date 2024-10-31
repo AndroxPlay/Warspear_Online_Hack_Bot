@@ -1,3 +1,4 @@
+
 # O início:
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 <br>Antes de começar a se aventurar procurando mobs para matar, é recomendado treinar e aprender o basico!
@@ -41,8 +42,10 @@ Resultado:
 <br>
 ![off](https://github.com/user-attachments/assets/2cc585d6-3bc1-45b9-91be-d0b2dc7c6848)
 Lembrando que o endereço: 0x00D30210 é dinâmico e não estático, visto que o game busca sempre poupar memória...e para isso vamos ler a memória e somar o deslocamento de ponteiro:
+![Capturar](https://github.com/user-attachments/assets/13f7712d-21b4-4c53-b4ec-d1e5f8fa3958)
 
-
+Nesse caso **"warspear.exe" = 0x400000** e representa o endereço base do nosso executável, e logo em seguida temos **0x847FF8** que seria o deslocamento do game na memória ram, a soma desses 2 valores resulta em **0xC47FF8** que é um novo endereço, se formos ler a memória dentro desse endereço vamos obter um novo endereço: **0xE15DCEC
+ (Nota: esse endereço muda sempre que você abre o jogo, visto que o game sempre vai abrir em um local diferente da memória...porém a soma continua a mesma, oq muda é apenas para onde a soma aponta!)**
 
 Aí está o valor da vida do Personagem!
 
