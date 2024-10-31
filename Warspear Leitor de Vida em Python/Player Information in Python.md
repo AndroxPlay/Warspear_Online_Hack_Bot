@@ -14,6 +14,7 @@
 Para ler a memória do warspear precisamos utilizar a biblioteca `Pymem` que permite acessar a memória dos programas que rodam no Windows!
 
 **Instalando Pymem**
+<br>
 Primeiro temos que abrir o cmd e digitar:
 
     pip install pymem
