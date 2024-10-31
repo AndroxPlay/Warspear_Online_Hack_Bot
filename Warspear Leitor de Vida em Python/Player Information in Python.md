@@ -30,8 +30,7 @@ Em seguida vamos pegar o id do processo pelo nome do processo e vamos salvar ess
 Em seguida podemos criar uma variável que seja nosso endereço da memória com a vida do personagem:
 
     resultado = 0x00D30210
-
-![leitor de memoria python](https://github.com/user-attachments/assets/416108b6-db98-4788-9f4b-b4ef5eed48ed)
+![pyt](https://github.com/user-attachments/assets/e080de91-8a65-42c8-912f-abca9487fe3c)
 
 Finalmente podemos ler esse endereço usando **pm.read_int**:
 
@@ -39,6 +38,7 @@ Finalmente podemos ler esse endereço usando **pm.read_int**:
     print("HP: ",resultado)
 
 Resultado:
+<br>
 ![off](https://github.com/user-attachments/assets/2cc585d6-3bc1-45b9-91be-d0b2dc7c6848)
 Lembrando que o endereço: 0x00D30210 é dinâmico e não estático, visto que o game busca sempre poupar memória...e para isso vamos ler a memória e somar o deslocamento de ponteiro:
 
