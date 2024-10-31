@@ -21,7 +21,7 @@
 <div align="center">
 Antes de começar, dê uma olhadinha em algo mais simples e básico:
   
-[Player Information in C++.md](https://github.com/AndroxPlay/Warspear_Online_Hack_Bot/blob/10e74d637d39727630c95b2d209e1bfbb46f7a68/Warspear%20Leitor%20de%20Vida%20em%20C%2B%2B/Player%20Information%20in%20C%2B%2B.md)
+[Player Information in C++.md](https://github.com/AndroxPlay/Warspear_Online_Hack_Bot/blob/main/Warspear%20Leitor%20de%20Vida%20em%20C%2B%2B%2FPlayer%20Information%20in%20C%2B%2B.md)
 
 Ou
 
