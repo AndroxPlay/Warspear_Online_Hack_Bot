@@ -1,7 +1,4 @@
 
-
-
-
 # O início:
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 <br>Antes de começar a se aventurar procurando mobs para matar, é recomendado treinar e aprender o basico!
