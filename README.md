@@ -22,6 +22,10 @@
 Antes de começar, dê uma olhadinha em algo mais simples e básico:
   
 [Player Information in C++.md](https://github.com/AndroxPlay/Warspear_Online_Hack_Bot/blob/0ebf8ecbdfb7f5549fbb83bcccf73c37a14c68cc/Player%20Information%20in%20C++.md)
+
+Ou
+
+
 </div>
 
 
