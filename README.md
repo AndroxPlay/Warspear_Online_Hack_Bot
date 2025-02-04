@@ -127,8 +127,8 @@ Ao Criar o **Auto_Targeter** a maioria das pessoas normalmente usa algum tipo de
  - Nome da Entidade:
  - White List: Mobs que o bot deve atacar
  - Black List: Mobs que o bot deve Ignorar
-  Distância entre a Entidade até o Player
-  Buffs e Debuffs
+ - Distância entre a Entidade até o Player
+ - Buffs e Debuffs
   
 
 ## Auto Attack
