@@ -2,15 +2,15 @@
 
 <br>Antes de começar a construir e editar o projeto, precisamos definir quais informações precisamos para montar o nosso bot, por exemplo:
 
-Auto Target:
+## Auto Target:
 
 Precisamos de uma lista de mobs para selecionar um para atacar(Entity Finder)
-O Player está vivo?
-Qual Nome do Mob?
-Qual a Posição do Mob - X / Y?
-O Mob está vivo?
-Qual a Posição do Cursor - X / Y?
-Qual a Flag do Cursor?
+<br>O Player está vivo?
+<br>Qual Nome do Mob?
+<br>Qual a Posição do Mob - X / Y?
+<br>O Mob está vivo?
+<br>Qual a Posição do Cursor - X / Y?
+<br>Qual a Flag do Cursor?
     
 
 Com essas informações, podemos construir algumas funções que usam essas informações, Ex:
