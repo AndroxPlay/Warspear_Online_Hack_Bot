@@ -21,6 +21,10 @@
 <div align="center">
 Antes de começar, dê uma olhadinha em algo mais simples e básico:
   
+[Cheat Engine Version](https://github.com/AndroxPlay/Warspear_Online_Hack_Bot/blob/main/Vers%C3%A3o%20Cheat%20Engine/Cheat%20Engine.md)
+
+Ou
+
 [Player Information in C++](https://github.com/AndroxPlay/Warspear_Online_Hack_Bot/blob/main/Warspear%20Leitor%20de%20Vida%20em%20C%2B%2B%2FPlayer%20Information%20in%20C%2B%2B.md)
 
 Ou
