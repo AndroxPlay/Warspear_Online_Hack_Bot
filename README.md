@@ -21,11 +21,11 @@
 <div align="center">
 Antes de começar, dê uma olhadinha em algo mais simples e básico:
   
-[Player Information in C++.md](https://github.com/AndroxPlay/Warspear_Online_Hack_Bot/blob/main/Warspear%20Leitor%20de%20Vida%20em%20C%2B%2B%2FPlayer%20Information%20in%20C%2B%2B.md)
+[Player Information in C++](https://github.com/AndroxPlay/Warspear_Online_Hack_Bot/blob/main/Warspear%20Leitor%20de%20Vida%20em%20C%2B%2B%2FPlayer%20Information%20in%20C%2B%2B.md)
 
 Ou
 
-[Player Information in Python.md](https://github.com/AndroxPlay/Warspear_Online_Hack_Bot/blob/main/Warspear%20Leitor%20de%20Vida%20em%20Python%2FPlayer%20Information%20in%20Python.md)
+[Player Information in Python](https://github.com/AndroxPlay/Warspear_Online_Hack_Bot/blob/main/Warspear%20Leitor%20de%20Vida%20em%20Python%2FPlayer%20Information%20in%20Python.md)
 </div>
 
 
